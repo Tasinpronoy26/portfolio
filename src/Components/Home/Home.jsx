@@ -1,14 +1,18 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import './Home.css';
 import { Link } from 'react-scroll';
 import lottie from 'lottie-web';
 import logo from '../../../public/logo.json'
+import { AuthContext } from '../AuthProvider/AuthProvider';
+import { BsSun, BsFillMoonStarsFill } from "react-icons/bs";
 
 
 
 
 
 const Home = () => {
+
+    const { handleToggle, toggle } = useContext(AuthContext);
 
 
     const container = useRef(null);
@@ -54,7 +58,7 @@ const Home = () => {
 
         <div id='/'>
 
-            <div className="navbar bg-white h-24 border shadow-md fixed z-50 max-w-sm md:max-w-screen-2xl">
+            <div className="navbar bg-white h-24 border shadow-md fixed z-50 md:max-w-sm lg:max-w-screen-2xl">
 
                 <div className="navbar-start lg:ms-36">
                     <div className="dropdown">
@@ -64,11 +68,15 @@ const Home = () => {
                         <ul tabIndex={0} className="dropdown-content grid grid-cols-1 font-serif mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                             {item}
                         </ul>
+
                     </div>
 
                     <div className='me-20 md:me-0 md:mb-0 md:w-24' ref={container}></div>
-                    <p className=' text-2xl font-bold italic'>Tas<span className='text-[#B27300]'>in</span></p>
+                    <div className='flex justify-center gap-5'>
+                        <p className=' text-2xl font-bold italic'>Tas<span className='text-[#B27300]'>in</span></p>
+                        <button className='lg:hidden' onClick={handleToggle}>{toggle ? <BsFillMoonStarsFill></BsFillMoonStarsFill> : <BsSun></BsSun>}</button>
 
+                    </div>
                 </div>
                 <div className="navbar-center  hidden lg:flex">
                     <ul className="lg:flex gap-6 font-serif px-1">
@@ -76,6 +84,7 @@ const Home = () => {
                         {item}
 
                     </ul>
+                    <button className='ms-5' onClick={handleToggle}>{toggle ? <BsFillMoonStarsFill></BsFillMoonStarsFill> : <BsSun></BsSun>}</button>
                 </div>
                 <div className="navbar-end lg:me-36">
                     <button id='button-download' onClick={handleDownloadResume}>Download Resume</button>

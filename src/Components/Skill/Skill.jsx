@@ -1,11 +1,13 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import lottie from 'lottie-web';
 import animation from '../../../public/skill.json'
 import { CircularProgressBar } from "@tomickigrzegorz/react-circular-progress-bar";
+import { AuthContext } from '../AuthProvider/AuthProvider';
 
 
 const Skill = () => {
     const container = useRef(null);
+    const {toggle} = useContext(AuthContext);
 
     useEffect(() => {
         const anim = lottie.loadAnimation({

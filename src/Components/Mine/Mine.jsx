@@ -107,9 +107,9 @@ const Mine = () => {
                     <img className='mt-12 md:mt-0 w-[500px] ' src="./17546705_1671577429811968_6227381158536932072_o.jpg" alt="" />
                 </motion.div>
 
-
-
             </div>
+
+
         </div>
     );
 };

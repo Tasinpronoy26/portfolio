@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { motion } from 'framer-motion';
 import '../About/About';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../AuthProvider/AuthProvider';
 
 
 const Moreinfo = () => {
+
+    const {toggle} = useContext(AuthContext);
 
     const handleDownloadResume = () => {
         const link = document.createElement('a');
@@ -21,7 +24,7 @@ const Moreinfo = () => {
 
     return (
         <div>
-            <div id='/'>
+            <div id='/' className={`${(!toggle) ? 'bg-[#181818] text-white transition-all duration-300' : 'bg-slate-50 transition-all duration-300'}`}>
 
                 <div className="navbar bg-white h-24 border shadow-md md:max-w-screen-2xl">
 
@@ -64,8 +67,8 @@ const Moreinfo = () => {
                                     <div className="card w-48 md:w-96 mb-12 ms-5 mt-5 rounded-none bg-base-100 shadow-lg">
                                         <div className="card-body text-left">
 
-                                            <p className='font-bold italic'>BSc in CSE</p>
-                                            <p className='font-bold italic'>Daffodil International University</p>
+                                            <p className={`${!toggle ? 'font-bold italic text-black' : 'font-bold italic'}`}>BSc in CSE</p>
+                                            <p className={`${!toggle ? 'font-bold italic text-black' : 'font-bold italic'}`}>Daffodil International University</p>
                                         </div>
                                     </div>
 
@@ -75,7 +78,7 @@ const Moreinfo = () => {
 
                                     <div className="card md:w-96 mb-12 ms-5 mt-5  rounded-none bg-base-100 shadow-lg">
                                         <div className="card-body">
-                                            <p className='font-bold italic'>10/7,F Block, Banasree, Dhaka, Bangladesh</p>
+                                            <p className={`${!toggle ? 'font-bold italic text-black' : 'font-bold italic'}`}>10/7,F Block, Banasree, Dhaka, Bangladesh</p>
                                         </div>
                                     </div>
 
@@ -87,7 +90,7 @@ const Moreinfo = () => {
                                     <div className="card md:w-96 mb-12 ms-5 mt-5  rounded-none bg-base-100 shadow-lg">
                                         <div className="card-body">
 
-                                            <p className='font-bold italic'>01533767026</p>
+                                            <p className={`${!toggle ? 'font-bold italic text-black' : 'font-bold italic'}`}>01533767026</p>
 
                                         </div>
                                     </div>

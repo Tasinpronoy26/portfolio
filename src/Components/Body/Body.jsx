@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Mine from '../Mine/Mine';
 import About from '../About/About';
 import Skill from '../Skill/Skill';
 import Portfolio from '../Portfolio/Portfolio';
 import Contact from '../../Contact/Contact';
+import { AuthContext } from '../AuthProvider/AuthProvider';
 
 const Body = () => {
+
+    const {toggle} = useContext(AuthContext);
+
+
     return (
-        <div className=' bg-gray-50'>
+        <div className={`${(!toggle) ? 'bg-[#181818] text-white transition-all duration-300' : 'bg-slate-50 transition-all duration-300'} `}>
 
             <Mine></Mine>
             <About></About>
