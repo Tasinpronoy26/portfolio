@@ -1,0 +1,151 @@
+.container {
+    width: 350px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.container form .descr {
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.input,
+textarea {
+    margin: 1em 0 1em 0;
+    width: 120%;
+    position: relative;
+}
+
+.input input,
+textarea {
+    font-size: 100%;
+    padding: 0.7em;
+    outline: none;
+    color: black;
+    border: none;
+    background: transparent;
+    border-radius: none;
+    width: 100%;
+    resize: none;
+}
+
+
+
+.input label {
+    font-size: 100%;
+    position: absolute;
+    left: 0;
+    color: black;
+    padding: 0.7em;
+    margin-left: 0.1em;
+    pointer-events: none;
+    transition: all 0.5s ease;
+    text-transform: uppercase;
+}
+
+.input :is(input:focus, input:valid)~label {
+    transform: translateY(-50%) scale(.9);
+    margin: 0em;
+    padding: 0.4em;
+    background: transparent;
+}
+
+.input textarea:focus~label,
+.input textarea:valid~label {
+    transform: translateY(-50%) scale(.9);
+    margin: 0em;
+    padding: 0.4em;
+    background: transparent;
+}
+
+.inputGroup :is(input:focus, input:valid) {
+    border-color: rgb(37, 37, 211);
+}
+
+.form button {
+    color: white;
+    width: 385px;
+    font-size: 15px;
+    padding: 0.6em;
+    border: none;
+    cursor: pointer;
+    margin: 18px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background: transparent;
+    background-color: #B27300;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.form button:before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.form button:hover:before {
+    opacity: 0.2;
+}
+
+.form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        width: 100;
+        height: auto;
+        margin: auto;
+    }
+
+    .form {
+        width: 100;
+    }
+
+    .input,
+    textarea {
+        width: 100%;
+    }
+
+    .input label {
+        font-size: 80%;
+    }
+
+    .form button {
+        color: white;
+        width: 320px;
+        margin: 18px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        background: transparent;
+        background-color: #B27300;
+        transition: all 0.3s ease-in-out;
+        position: relative;
+        overflow: hidden;
+    }
+}
