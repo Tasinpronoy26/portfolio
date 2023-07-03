@@ -34,7 +34,7 @@ const Portfolio = () => {
                 <h1 className='text-2xl md:text-6xl font-extrabold italic'>My <span className='text-[#B27300]'>Portfolio</span></h1>
                 <div className='mx-20 md:mx-0 mb-10 me-32 md:me-0 md:mb-0 w-52 mt-5 md:mt-0 md:w-48' ref={container}></div>
             </div>
-            <div className='md:flex justify-center gap-6 mx-16 md:mx-0'>
+            <div className='md:flex justify-center gap-6 mx-12 lg:mx-28'>
 
                 <div class="card-portfolio">
                     <img src='./Projects/Screenshot (256).png'  alt="" />

@@ -36,11 +36,15 @@ textarea {
     padding: 0.7em;
     outline: none;
     color: black;
-    border: none;
     background: transparent;
-    border-radius: none;
     width: 100%;
     resize: none;
+}
+
+#message{
+
+    width: 120%;
+    border-radius: 8px;
 }
 
 
@@ -78,12 +82,11 @@ textarea {
 
 .form button {
     color: white;
-    width: 385px;
+    width: 120%;
     font-size: 15px;
     padding: 0.6em;
     border: none;
     cursor: pointer;
-    margin: 18px;
     margin-top: 50px;
     margin-bottom: 50px;
     background: transparent;
@@ -132,14 +135,17 @@ textarea {
         width: 100%;
     }
 
+    #message {
+        width: 100%;
+    }
+
     .input label {
         font-size: 80%;
     }
 
     .form button {
         color: white;
-        width: 320px;
-        margin: 18px;
+        width: 100%;
         margin-top: 50px;
         margin-bottom: 50px;
         background: transparent;

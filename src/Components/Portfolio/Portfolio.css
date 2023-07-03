@@ -65,7 +65,7 @@
 @media (max-width: 767px) {
     .card-portfolio {
         
-        width: 250px;
+        width: 280px;
         height: 100%;
         margin-bottom: 40px;
         
@@ -73,11 +73,11 @@
     }
 
     .card-portfolio__title {
-        font-size: 20px;
+        font-size: 30px;
     }
 
     .card-portfolio__description {
-        font-size: 5px;
+        font-size: 10px;
 
     }
 }

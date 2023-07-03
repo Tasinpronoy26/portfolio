@@ -12,7 +12,7 @@ const Body = () => {
 
 
     return (
-        <div className={`${(!toggle) ? 'bg-[#181818] text-white transition-all duration-300' : 'bg-slate-50 transition-all duration-300'} `}>
+        <div className={`${(!toggle) ? 'bg-[#181818] text-white transition-all duration-300' : 'bg-white transition-all duration-300'} `}>
 
             <Mine></Mine>
             <About></About>

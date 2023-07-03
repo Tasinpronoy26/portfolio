@@ -32,10 +32,10 @@ const Mine = () => {
     return (
         <div className='pt-36 md:flex justify-center items-center mx-8 md:mx-36'>
 
-            <div className='ms-5 md:ms-0'>
-                <div className='ms-10 md:ms-0 md:me-0 w-48 md:w-[400px]' ref={container}></div>
-                <h1 className='text-xl md:text-6xl md:ms-3 text-center md:text-left font-extrabold mb-3 italic'>Md. Asik Reza Tasin</h1>
-                <span className='mb-10 md:mb-0 text-xl md:text-4xl md:ms-3 font-bold text-[#B27300] italic'>
+            <div className='mx-16 md:ms-0'>
+                <div className=' md:ms-0 md:me-0 w-48 md:w-[400px]' ref={container}></div>
+                <h1 className='text-sm lg:text-5xl md:ms-3 text-center md:text-left font-extrabold mb-3 italic'>Md. Asik Reza Tasin</h1>
+                <span className='mb-10 md:mb-0 text-sm md:text-4xl md:ms-3 font-bold text-[#B27300] italic'>
                     <Typewriter
                         words={['Specialized in React.js', 'MERN stack Web Developer']}
                         loop={20}
@@ -104,7 +104,7 @@ const Mine = () => {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 2 }}
                 >
-                    <img className='mt-12 md:mt-0 w-[500px] ' src="./17546705_1671577429811968_6227381158536932072_o.jpg" alt="" />
+                    <img className='mt-12 md:mt-0 w-[500px]' src="./17546705_1671577429811968_6227381158536932072_o.jpg" alt="" />
                 </motion.div>
 
             </div>

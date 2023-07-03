@@ -78,7 +78,7 @@ const Contact = () => {
                                 <input required="" autoComplete="off" placeholder='Email' name="from_email" type="email" />
                                 
                             </div>
-                            <div className="input">
+                            <div className=" bg-white mt-2" id='message'>
                                 <textarea required="" cols="30" rows="1" placeholder='Message' id="message" name='message'></textarea>
                                 
                             </div>

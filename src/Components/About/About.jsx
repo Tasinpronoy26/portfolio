@@ -29,7 +29,7 @@ const About = () => {
 
     return (
         <div className='my-16 mx-10 md:ms-32 md:mx-36 md:flex justify-center items-center gap-24' id='about'>
-            <div className='mb-10 md:me-32 md:mb-0 md:w-[600px]' ref={container}></div>
+            <div className='mb-10 me-0 md:me-32 md:mb-0 md:w-[600px]' ref={container}></div>
              
             <div className='md:w-96'>
                 <h1 className='text-xl md:text-2xl mb-10 font-extrabold italic'>Hello <span className='text-[#B27300]'>Everyone</span></h1>
@@ -38,7 +38,7 @@ const About = () => {
                     my professional journey in web development.
                 </p>
                 <Link to="/moreinfo">
-                    <button className='btn-more-info mx-10 md:mx-0'> MORE INFO
+                    <button className='btn-more-info mx-16 md:mx-0'> MORE INFO
                     </button>
                 </Link>
             </div>
